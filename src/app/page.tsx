@@ -30,7 +30,7 @@ export default function Home() {
     href,
     src,
   }: ProjectCardProps) => (
-    <article className="flex flex-col p-4 md:p-10 border dark:border-neutral-700 h-fit">
+    <article className="flex flex-col p-4 md:p-10 border dark:border-neutral-700 h-fit w-full lg:w-fit">
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="my-4 max-w-[50ch]">{description}</p>
       <Tools tools={tools} />
@@ -55,7 +55,7 @@ export default function Home() {
           JAMES
         </h1>
         <p className="text-gray-800 mb-5 max-w-xl text-center">
-          👋 Hi, I&apos;m a fullstack developer and a computer Science student
+          👋 Hi, I&apos;m a fullstack developer and a Computer Science student
           at the University of Hawai&lsquo;i at Mānoa. I expect to graduate with
           a bachelor of science in Fall 2024.
         </p>
