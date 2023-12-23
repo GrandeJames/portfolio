@@ -1,113 +1,166 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
+
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  href: string;
+  src: string;
+  tools: string[];
+}
+
+const Tool = ({ name }: { name: string }) => (
+  <span className="text-sm px-4 py-1 bg-gray-200 rounded-sm">{name}</span>
+);
+
+const Tools = ({ tools }: { tools: string[] }) => (
+  <div className="flex flex-wrap gap-3">
+    {tools.map((tool, index) => (
+      <Tool name={tool} key={index} />
+    ))}
+  </div>
+);
 
 export default function Home() {
+  const ProjectCard = ({
+    title,
+    description,
+    tools,
+    href,
+    src,
+  }: ProjectCardProps) => (
+    <article className="flex flex-col p-10 border dark:border-neutral-700 h-fit">
+      <h3 className="text-2xl font-semibold">{title}</h3>
+      <p className="my-4 max-w-[50ch]">{description}</p>
+      <Tools tools={tools} />
+    </article>
+  );
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <div className="flex min-h-screen flex-col px-7 md:px-20 lg:px-24">
+      <header className="flex flex-col items-center h-[100vh] justify-center">
+        <nav className="flex justify-center gap-6 text-gray-500">
+          <a href="#work" className="">
+            work
+          </a>
+          <a href="#projects" className="">
+            projects
+          </a>
+          <a href="#contact" className="">
+            contact
+          </a>
+        </nav>
+        <h1 className="my-12 text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest">
+          JAMES
+        </h1>
+        <p className="text-gray-800 mb-5 max-w-xl text-center">
+          👋 Hi, I&apos;m a fullstack developer a Computer Science student at
+          the University of Hawai&lsquo;i at Mānoa. I expect to graduate with a
+          bachelor of science in Fall 2024.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+
+        <div className="mb-2">
+          Email:{" "}
+          <a href="mailto:jlgrande@hawaii.edu" className="underline">
+            jlgrande@hawaii.edu
           </a>
         </div>
-      </div>
+        <div className="flex gap-5">
+          <Link href={"https://www.linkedin.com/in/jlag6/"}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 448 512"
+            >
+              <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+            </svg>
+          </Link>
+          <Link href={"https://github.com/GrandeJames"}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 496 512"
+            >
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+            </svg>
+          </Link>
+        </div>
+      </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <main>
+        <section className="mb-24">
+          <h2 className="text-5xl font-bold tracking-wide mb-5">PROJECTS</h2>
+          <div className="flex flex-wrap gap-10">
+            <ProjectCard
+              title="fo. focus"
+              description="Currently building!"
+              href=""
+              src=""
+              tools={["Next.js", "TailwindCSS", "Typescript"]}
+            />
+            <ProjectCard
+              title="grandejames.com"
+              description="This website!"
+              href=""
+              src=""
+              tools={["Next.js", "TailwindCSS", "Typescript"]}
+            />
+            <ProjectCard
+              title="Makai"
+              description="3rd place at the 2023 Hawaii Annual Code Challenge. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum."
+              href=""
+              src=""
+              tools={["JavaScript", "Next.js", "MongoDB", "TailwindCSS"]}
+            />
+            <ProjectCard
+              title="Office Space Manager"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum."
+              href=""
+              src=""
+              tools={["JavaScript", "React", "Bootstrap", "Meteor"]}
+            />
+          </div>
+        </section>
+        <section className="my-10">
+          <h2 className="text-5xl font-bold tracking-wide mb-5">WORK</h2>
+          <article className="max-w-[75ch] border border-gray-800 p-10">
+            <div className="text-sm">July 2023 - Present</div>
+            <div className="font-semibold">VolunteerAlly</div>
+            <div className="italic">Software Developer Intern</div>
+            <div className="my-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+              dolore qui ad maiores laboriosam doloremque minus, eveniet,
+              doloribus neque, distinctio id. Perspiciatis perferendis animi
+              deserunt rerum velit ducimus reiciendis laborum!
+            </div>
+            <Tools
+              tools={[
+                "Typescript",
+                "Next.js",
+                "React",
+                "CSS",
+                "TailwindCSS",
+                "Bootstrap",
+              ]}
+            />
+          </article>
+        </section>
+        <footer className="flex flex-col items-center my-32 gap-8">
+          <div className="text-4xl font-semibold">Stay in touch! ❤️</div>
+          <Link
+            href={""}
+            className="border font-bold px-10 py-4 bg-gray-800 text-gray-50 tracking-widest"
+          >
+            CONTACT ME
+          </Link>
+        </footer>
+      </main>
+    </div>
+  );
+}
+function el(value: string, index: number, array: string[]): ReactNode {
+  throw new Error("Function not implemented.");
 }
