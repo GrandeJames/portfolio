@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 const Tool = ({ name }: { name: string }) => (
-  <span className="text-sm px-4 py-1 bg-gray-200">{name}</span>
+  <span className="text-sm px-4 py-1 border border-black">{name}</span>
 );
 
 const Tools = ({ tools }: { tools: string[] }) => (
@@ -22,7 +22,7 @@ const Tools = ({ tools }: { tools: string[] }) => (
 
 export default function Home() {
   const ProjectCard = ({ title, description, tools }: ProjectCardProps) => (
-    <article className="flex flex-col p-4 md:p-10 bg-gray-100 h-fit w-full lg:w-fit">
+    <article className="flex flex-col p-4 md:p-10 bg-gray-500 h-fit w-full lg:w-fit bg-opacity-10">
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="my-4 max-w-[50ch]">{description}</p>
       <Tools tools={tools} />
@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col px-7 md:px-20 lg:px-24">
-      <header className="flex flex-col items-center h-[100vh] justify-center">
+      <header className="flex flex-col items-center h-[90vh] justify-center mb-20">
         <div className="overflow-hidden">
           <motion.nav
             className="flex justify-center gap-6 text-gray-500"
@@ -145,13 +145,12 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide mb-5">
             WORK
           </h2>
-          <article className="max-w-[75ch] bg-gray-100 p-4 md:p-10">
+          <article className="max-w-[75ch] bg-gray-500 p-4 md:p-10 bg-opacity-10 flex flex-col gap-4">
             <div className="text-sm">July 2023 - Present</div>
-            <div className="my-3">
+            <div className="">
               <div className="font-semibold">VolunteerAlly</div>
               <div className="italic">Software Developer Intern</div>
             </div>
-
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
               dolore qui ad maiores laboriosam doloremque minus, eveniet,
