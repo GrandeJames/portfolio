@@ -55,9 +55,9 @@ export default function Home() {
           JAMES
         </h1>
         <p className="text-gray-800 mb-5 max-w-xl text-center">
-          👋 Hi, I&apos;m a fullstack developer a Computer Science student at
-          the University of Hawai&lsquo;i at Mānoa. I expect to graduate with a
-          bachelor of science in Fall 2024.
+          👋 Hi, I&apos;m a fullstack developer and a computer Science student
+          at the University of Hawai&lsquo;i at Mānoa. I expect to graduate with
+          a bachelor of science in Fall 2024.
         </p>
 
         <div className="mb-2">
