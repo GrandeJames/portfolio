@@ -30,7 +30,7 @@ export default function Home() {
     href,
     src,
   }: ProjectCardProps) => (
-    <article className="flex flex-col p-10 border dark:border-neutral-700 h-fit">
+    <article className="flex flex-col p-4 md:p-10 border dark:border-neutral-700 h-fit">
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="my-4 max-w-[50ch]">{description}</p>
       <Tools tools={tools} />
@@ -91,8 +91,10 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="mb-24">
-          <h2 className="text-5xl font-bold tracking-wide mb-5">PROJECTS</h2>
+        <section id="projects" className="mb-24">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-wide mb-5">
+            PROJECTS
+          </h2>
           <div className="flex flex-wrap gap-10">
             <ProjectCard
               title="fo. focus"
@@ -124,9 +126,11 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="my-10">
-          <h2 className="text-5xl font-bold tracking-wide mb-5">WORK</h2>
-          <article className="max-w-[75ch] border border-gray-800 p-10">
+        <section id="work" className="my-10">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-wide mb-5">
+            WORK
+          </h2>
+          <article className="max-w-[75ch] border border-gray-800 p-4 md:p-10">
             <div className="text-sm">July 2023 - Present</div>
             <div className="font-semibold">VolunteerAlly</div>
             <div className="italic">Software Developer Intern</div>
@@ -149,7 +153,9 @@ export default function Home() {
           </article>
         </section>
         <footer className="flex flex-col items-center my-32 gap-8">
-          <div className="text-4xl font-semibold">Stay in touch! ❤️</div>
+          <div className="text-2xl md:text-4xl font-semibold">
+            Stay in touch! ❤️
+          </div>
           <Link
             href={""}
             className="border font-bold px-10 py-4 bg-gray-800 text-gray-50 tracking-widest"
