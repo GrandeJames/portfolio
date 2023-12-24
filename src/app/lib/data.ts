@@ -1,8 +1,8 @@
 export const projects = [
   {
     title: "fo. focus",
-    description: "Currently building!",
-    tools: ["Typescript", "MongoDB", "Next.js", "TailwindCSS"],
+    description: "My next project!",
+    tools: [],
   },
   {
     title: "grandejames.com",

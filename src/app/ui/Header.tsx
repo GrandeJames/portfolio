@@ -4,7 +4,21 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { GithubIcon, LinkedinIcon } from "../icons/linkedIn-icon";
 
-export default function Header() {
+const scrollToRefSmoothly = (ref: any) => {
+  console.log(ref);
+  window.scrollTo({
+    top: ref.current.offsetTop,
+    behavior: "smooth",
+  });
+};
+
+export default function Header({
+  projectsRef,
+  workRef,
+}: {
+  projectsRef: any;
+  workRef: any;
+}) {
   return (
     <header className="flex flex-col items-center h-[90vh] justify-center mb-20">
       <div className="overflow-hidden">
@@ -14,16 +28,10 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.div
-            whileHover={{ scale: 1.1, color: "#000" }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
-          >
-            <a href="#work">work</a>
-          </motion.div>
-          <a href="#projects" className="">
+          <button onClick={() => scrollToRefSmoothly(projectsRef)}>
             projects
-          </a>
+          </button>
+          <button onClick={() => scrollToRefSmoothly(workRef)}>work</button>
           <a href="#contact" className="">
             contact
           </a>

@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { projects, work } from "./lib/data";
 import Header from "./ui/Header";
 import Section from "./ui/Section";
 import { Tools } from "./ui/Tools";
+import { useRef } from "react";
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -10,6 +13,9 @@ interface ProjectCardProps {
 }
 
 export default function Home() {
+  const projectsRef = useRef(null);
+  const workRef = useRef(null);
+
   const ProjectCard = ({ title, description, tools }: ProjectCardProps) => (
     <article className="flex flex-col p-4 md:p-10 bg-gray-500 h-fit w-full lg:w-fit bg-opacity-10">
       <h3 className="text-2xl font-semibold">{title}</h3>
@@ -20,9 +26,9 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col px-7 md:px-20 lg:px-24">
-      <Header />
+      <Header projectsRef={projectsRef} workRef={workRef} />
       <main>
-        <Section title={"PROJECTS"}>
+        <Section title={"PROJECTS"} reference={projectsRef}>
           <div className="flex flex-wrap gap-10">
             {projects.map((project, index) => (
               <ProjectCard
@@ -34,7 +40,7 @@ export default function Home() {
             ))}
           </div>
         </Section>
-        <Section title="WORK">
+        <Section title="WORK" reference={workRef}>
           {work.map((job, index) => (
             <article
               key={index}
