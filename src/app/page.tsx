@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { projects } from "./lib/data";
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -119,26 +120,14 @@ export default function Home() {
             PROJECTS
           </h2>
           <div className="flex flex-wrap gap-10">
-            <ProjectCard
-              title="fo. focus"
-              description="Currently building!"
-              tools={["Next.js", "TailwindCSS", "Typescript"]}
-            />
-            <ProjectCard
-              title="grandejames.com"
-              description="This website!"
-              tools={["Next.js", "TailwindCSS", "Typescript"]}
-            />
-            <ProjectCard
-              title="Makai"
-              description="3rd place at the 2023 Hawaii Annual Code Challenge. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum."
-              tools={["JavaScript", "Next.js", "MongoDB", "TailwindCSS"]}
-            />
-            <ProjectCard
-              title="Office Space Manager"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum."
-              tools={["JavaScript", "React", "Bootstrap", "Meteor"]}
-            />
+            {projects.map((project, index) => (
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                tools={project.tools}
+                key={index}
+              />
+            ))}
           </div>
         </section>
         <section id="work" className="my-10">
