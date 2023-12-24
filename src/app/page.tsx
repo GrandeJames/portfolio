@@ -1,73 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { projects, work } from "./lib/data";
-import Header from "./ui/Header";
-import Section from "./ui/Section";
-import { Tools } from "./ui/Tools";
-import { useRef } from "react";
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tools: string[];
-}
+import { motion } from "framer-motion";
+import { GithubIcon, LinkedinIcon } from "./icons/linkedIn-icon";
 
 export default function Home() {
-  const projectsRef = useRef(null);
-  const workRef = useRef(null);
-
-  const ProjectCard = ({ title, description, tools }: ProjectCardProps) => (
-    <article className="flex flex-col p-4 md:p-10 bg-gray-500 h-fit w-full lg:w-fit bg-opacity-10">
-      <h3 className="text-2xl font-semibold">{title}</h3>
-      <p className="my-4 max-w-[50ch]">{description}</p>
-      <Tools tools={tools} />
-    </article>
-  );
-
   return (
-    <div className="flex min-h-screen flex-col px-7 md:px-20 lg:px-24">
-      <Header projectsRef={projectsRef} workRef={workRef} />
-      <main>
-        <Section title={"PROJECTS"} reference={projectsRef}>
-          <div className="flex flex-wrap gap-10">
-            {projects.map((project, index) => (
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                tools={project.tools}
-                key={index}
-              />
-            ))}
-          </div>
-        </Section>
-        <Section title="WORK" reference={workRef}>
-          {work.map((job, index) => (
-            <article
-              key={index}
-              className="max-w-[75ch] bg-gray-500 p-4 md:p-10 bg-opacity-10 flex flex-col gap-4"
-            >
-              <div className="text-sm">{job.date}</div>
-              <div className="">
-                <div className="font-semibold">{job.company}</div>
-                <div className="italic">{job.title}</div>
-              </div>
-              <p>{job.description}</p>
-              <Tools tools={job.tools} />
-            </article>
-          ))}
-        </Section>
-      </main>
-      <footer className="flex flex-col items-center my-32 gap-8">
-        <div className="text-2xl md:text-4xl font-semibold">
-          Stay in touch! ❤️
-        </div>
-        <Link
-          href={""}
-          className="border font-bold px-10 py-4 bg-gray-800 text-gray-50 tracking-widest"
+    <div className="flex flex-col items-center">
+      <motion.h1
+        className="my-12 text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        JAMES
+      </motion.h1>
+
+      <div className="overflow-hidden">
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 300 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          CONTACT ME
-        </Link>
-      </footer>
+          <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
+            👋 Hi, I&apos;m a fullstack developer and a Computer Science student
+            at the University of Hawai&lsquo;i at Mānoa. I expect to graduate
+            with a bachelor of science in Fall 2024.
+          </p>
+
+          <div className="mb-2">
+            Email:{" "}
+            <a href="mailto:jlgrande@hawaii.edu" className="underline">
+              jlgrande@hawaii.edu
+            </a>
+          </div>
+          <div className="flex gap-5">
+            <Link href={"https://www.linkedin.com/in/jlag6/"}>
+              <LinkedinIcon />
+            </Link>
+            <Link href={"https://github.com/GrandeJames"}>
+              <GithubIcon />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
