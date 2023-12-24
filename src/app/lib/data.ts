@@ -22,3 +22,21 @@ export const projects = [
     tools: ["JavaScript", "React", "Bootstrap", "Meteor"],
   },
 ];
+
+export const work = [
+  {
+    date: "2021 - Present",
+    title: "Software Engineer Intern",
+    company: "VolunteerAlly",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
+    tools: [
+      "Typescript",
+      "Next.js",
+      "React",
+      "CSS",
+      "TailwindCSS",
+      "Bootstrap",
+    ],
+  },
+];
