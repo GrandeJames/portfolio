@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "fo. focus",
     description: "My next project!",
-    tools: [],
+    tools: ["Typescript", "Next.js", "TailwindCSS", "MongoDB"],
   },
   {
     title: "grandejames.com",
@@ -11,15 +11,14 @@ export const projects = [
   },
   {
     title: "Makai",
-    description:
-      "3rd place at the 2023 Hawaii Annual Code Challenge. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
+    description: "3rd place at the 2023 Hawaii Annual Code Challenge.",
     tools: ["JavaScript", "React", "MongoDB", "TailwindCSS"],
   },
   {
     title: "Office Space Manager",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
-    tools: ["JavaScript", "React", "Bootstrap", "Meteor"],
+    tools: ["JavaScript", "React", "D3.js", "Bootstrap", "Meteor"],
   },
 ];
 
@@ -32,6 +31,7 @@ export const work = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
     tools: [
       "Typescript",
+      "JavaScript",
       "Next.js",
       "React",
       "CSS",

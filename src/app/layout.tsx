@@ -20,14 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="p-20">
-          <nav className="flex justify-center gap-6 text-gray-500 mb-10">
-            <Link href="/">home</Link>
-            <Link href="/projects">projects</Link>
-            <Link href="/work">work</Link>
-            <Link href="/contact">contact</Link>
-          </nav>
-          <main className="">{children}</main>
+        <div className="min-h-screen">
+          <div className="p-4 md:p-10 lg:p-20">
+            <nav className="flex justify-center gap-6 text-gray-500 mb-10">
+              <Link href="/">home</Link>
+              <Link href="/projects">projects</Link>
+              <Link href="/work">work</Link>
+              <Link href="/contact">contact</Link>
+            </nav>
+            {children}
+          </div>
         </div>
         <SpeedInsights />
       </body>

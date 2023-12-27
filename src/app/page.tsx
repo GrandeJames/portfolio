@@ -24,17 +24,12 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
-            👋 Hi, I&apos;m a fullstack developer and a Computer Science student
-            at the University of Hawai&lsquo;i at Mānoa. I expect to graduate
-            with a bachelor of science in Fall 2024.
+            👋 Hi, I&apos;m a full-stack developer and a Computer Science
+            student at the University of Hawai&lsquo;i at Mānoa. I am passionate
+            about creating maintainable and scalable software solutions that
+            customers love.
           </p>
 
-          <div className="mb-2">
-            Email:{" "}
-            <a href="mailto:jlgrande@hawaii.edu" className="underline">
-              jlgrande@hawaii.edu
-            </a>
-          </div>
           <div className="flex gap-5">
             <Link href={"https://www.linkedin.com/in/jlag6/"}>
               <LinkedinIcon />
