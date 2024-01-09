@@ -31,8 +31,7 @@ export const work = [
     date: "2021 - Present",
     title: "Software Engineer Intern",
     company: "VolunteerAlly",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
+    description: "I am currently working as a full-stack web developer",
     tools: [
       "Typescript",
       "JavaScript",

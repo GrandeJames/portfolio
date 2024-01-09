@@ -21,7 +21,7 @@ export default function Work() {
             <div className="font-semibold">{job.company}</div>
             <div className="italic">{job.title}</div>
           </div>
-          <p>{job.description}</p>
+          <p className="text-gray-700">{job.description}</p>
           <Tools tools={job.tools} />
         </article>
       ))}
