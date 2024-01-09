@@ -28,7 +28,7 @@ export const projects = [
 
 export const work = [
   {
-    date: "2021 - Present",
+    date: "July 2023 - Present",
     title: "Software Engineer Intern",
     company: "VolunteerAlly",
     description: "I am currently working as a full-stack web developer",
