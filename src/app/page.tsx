@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon } from "./icons/linkedIn-icon";
 
+// TODO: fix duplications!
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
