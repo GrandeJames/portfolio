@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Makai",
     description:
-      "Won 3rd place at the 2023 Hawaii Annual Code Challenge. Makai is a web app used to help with the removal and tracking of research data on large marine debris in Hawaii.",
+      "Won 3rd place at the 2023 Hawaii Annual Code Challenge. Makai is a web app used to help with the removal and data tracking on large marine debris in Hawai'i.",
     tools: ["JavaScript", "React", "MongoDB", "TailwindCSS"],
     imageSrc: "/makai.png",
     websiteLink: "https://makai-marine.vercel.app/",
@@ -11,7 +11,7 @@ export const projects = [
   {
     title: "Office Space Manager",
     description:
-      "A web app for tracking office space usage and assets for the ICS department at the University of Hawaii at Manoa.",
+      "A web application for tracking office space usage and assets for the ICS department at the University of Hawai'i at Mānoa.",
     tools: ["JavaScript", "React", "D3.js", "Bootstrap", "Meteor"],
     imageSrc: "/osm.png",
     githubLink: "https://github.com/ics414t3/ics-osm",
