@@ -1,5 +1,9 @@
 export function Tool({ name }: { name: string }) {
-  return <span className="text-sm px-4 py-1 border border-black">{name}</span>;
+  return (
+    <span className="text-xs px-4 py-1 bg-neutral-500 rounded-3xl text-white">
+      {name}
+    </span>
+  );
 }
 
 export function Tools({ tools }: { tools: string[] }) {

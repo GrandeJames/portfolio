@@ -1,24 +1,22 @@
 export const projects = [
   {
-    title: "fo. focus",
-    description: "My next project!",
-    tools: ["Typescript", "Next.js", "TailwindCSS", "MongoDB"],
+    title: "Makai",
+    description: "3rd place at the 2023 Hawaii Annual Code Challenge",
+    tools: ["JavaScript", "React", "MongoDB", "TailwindCSS"],
+    imageSrc: "/makai.png",
+  },
+  {
+    title: "Office Space Manager",
+    description:
+      "A web app designed to help office space management. This includes tracking office space usage and assets in each office.",
+    tools: ["JavaScript", "React", "D3.js", "Bootstrap", "Meteor"],
+    imageSrc: "/osm.png",
   },
   {
     title: "grandejames.com",
     description: "This website!",
     tools: ["Typescript", "Next.js", "TailwindCSS"],
-  },
-  {
-    title: "Makai",
-    description: "3rd place at the 2023 Hawaii Annual Code Challenge.",
-    tools: ["JavaScript", "React", "MongoDB", "TailwindCSS"],
-  },
-  {
-    title: "Office Space Manager",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum.",
-    tools: ["JavaScript", "React", "D3.js", "Bootstrap", "Meteor"],
+    imageSrc: "/portfolio.png",
   },
 ];
 
