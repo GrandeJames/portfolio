@@ -28,7 +28,7 @@ export default function Projects() {
     githubLink,
     websiteLink,
   }: ProjectCardProps) => (
-    <div className="flex flex-col p-4 md:p-10 relative rounded-3xl overflow-hidden w-[500px] h-[550px] justify-end">
+    <div className="flex flex-col p-4 md:p-10 relative overflow-hidden w-[500px] h-[550px] justify-end">
       {imageSrc && (
         <Image
           alt="Project Image"
