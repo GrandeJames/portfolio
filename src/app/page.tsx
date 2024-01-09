@@ -11,7 +11,7 @@ export default function Home() {
         className="my-12 text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
         JAMES
       </motion.h1>
@@ -21,7 +21,7 @@ export default function Home() {
           className="flex flex-col items-center"
           initial={{ opacity: 0, y: 300 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
             👋 Hi, I&apos;m a full-stack developer and a Computer Science

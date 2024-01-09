@@ -1,14 +1,12 @@
+"use client";
+
 import Page from "../ui/Section";
 import { projects } from "../lib/data";
 import { Tools } from "../ui/Tools";
 import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Projects | James Grande",
-  description: "James Grande's projects",
-};
+import { motion, Variants } from "framer-motion";
 
 interface ProjectCardProps {
   title: string;
@@ -85,21 +83,37 @@ export default function Projects() {
     </div>
   );
 
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <Page title={"PROJECTS"}>
-      <div className="flex flex-wrap gap-10">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={cardVariants}
+        className="flex flex-wrap gap-10"
+      >
         {projects.map((project, index) => (
-          <ProjectCard
-            websiteLink={project.websiteLink}
-            githubLink={project.githubLink}
-            title={project.title}
-            description={project.description}
-            tools={project.tools}
-            imageSrc={project.imageSrc}
+          <motion.div
             key={index}
-          />
+            variants={cardVariants}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <ProjectCard
+              websiteLink={project.websiteLink}
+              githubLink={project.githubLink}
+              title={project.title}
+              description={project.description}
+              tools={project.tools}
+              imageSrc={project.imageSrc}
+              key={index}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Page>
   );
 }
