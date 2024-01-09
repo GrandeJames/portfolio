@@ -38,7 +38,7 @@ export default function Projects() {
           objectPosition="top"
         />
       )}
-
+      <div className="absolute inset-0 bg-black opacity-5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
 
       <div className="z-10 text-white">
