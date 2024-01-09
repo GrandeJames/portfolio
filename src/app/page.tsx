@@ -29,7 +29,12 @@ export default function Home() {
             about creating maintainable and scalable software solutions that
             customers love.
           </p>
-
+          <div className="m-3 text-center">
+            Email:{" "}
+            <a href="mailto:james.grande6@gmail.com" className="underline">
+              james.grande6@gmail.com
+            </a>
+          </div>
           <div className="flex gap-5">
             <Link href={"https://www.linkedin.com/in/jlag6/"}>
               <LinkedinIcon />
