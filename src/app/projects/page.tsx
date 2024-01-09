@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "James Grande | Projects",
-  description: "James Grande's projects.",
+  title: "Projects | James Grande",
+  description: "James Grande's projects",
 };
 
 interface ProjectCardProps {

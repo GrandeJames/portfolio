@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "James Grande",
   description:
-    "James Grande is a Computer Science student. He is a full-stack developer.",
+    "James Grande is a Computer Science student at University of Hawaii at Manoa.",
 };
 
 export default function RootLayout({

@@ -1,6 +1,12 @@
 import Page from "../ui/Section";
 import { work } from "../lib/data";
 import { Tools } from "../ui/Tools";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work | James Grande",
+  description: "James Grande's work",
+};
 
 export default function Work() {
   return (
