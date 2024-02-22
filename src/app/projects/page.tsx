@@ -44,7 +44,7 @@ export default function Projects() {
         <p className="my-4 max-w-[50ch] text-gray-300">{description}</p>
         <div className="flex gap-10 my-3 font-medium">
           {githubLink && (
-            <Link href={githubLink} className="flex gap-1">
+            <Link href={githubLink} target="_blank" className="flex gap-1">
               GitHub{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function Projects() {
             </Link>
           )}
           {websiteLink && (
-            <Link href={websiteLink} className="flex gap-1">
+            <Link href={websiteLink} target="_blank" className="flex gap-1">
               Website{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
