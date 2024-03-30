@@ -17,6 +17,10 @@ interface ProjectCardProps {
   websiteLink?: string;
 }
 
+// TODO: add meta data
+// TODO: fix alt text
+// TODO: fix mobile
+
 export default function Projects() {
   const ProjectCard = ({
     title,
