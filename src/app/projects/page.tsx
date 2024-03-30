@@ -32,7 +32,15 @@ export default function Projects() {
   }: ProjectCardProps) => (
     <div className="flex flex-col p-4 md:p-10 relative overflow-hidden w-[500px] h-[550px] justify-end">
       {imageSrc && (
-        <Image alt="Project Image" src={imageSrc} fill className="object-cover object-top" />
+        <Image
+          alt="Project Image"
+          src={imageSrc}
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={true}
+          quality={100}
+        />
       )}
       <div className="absolute inset-0 bg-black opacity-5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
