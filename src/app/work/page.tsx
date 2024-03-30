@@ -1,5 +1,5 @@
 "use client";
-import Page from "../ui/Section";
+import Page from "../ui/Page";
 import { work } from "../lib/data";
 import { Tools } from "../ui/Tools";
 import { Metadata } from "next";

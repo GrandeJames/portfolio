@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "../ui/Section";
+import Page from "../ui/Page";
 import { projects } from "../lib/data";
 import { Tools } from "../ui/Tools";
 import Image from "next/image";
