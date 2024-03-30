@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "../ui/Page";
+import Page from "../ui/Section";
 import { projects } from "../lib/data";
 import { Tools } from "../ui/Tools";
 import Image from "next/image";
@@ -36,7 +36,7 @@ export default function Projects() {
           alt="Project Image"
           src={imageSrc}
           fill
-          className="object-cover object-top"
+          className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={true}
           quality={100}
