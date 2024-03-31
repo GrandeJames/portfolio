@@ -16,14 +16,6 @@ export const projects = [
     imageSrc: "/osm.webp",
     githubLink: "https://github.com/ics414t3/ics-osm",
   },
-  {
-    title: "grandejames.com",
-    description: "This website!",
-    tools: ["Typescript", "Next.js", "TailwindCSS"],
-    imageSrc: "/portfolio.webp",
-    websiteLink: "https://grandejames.com",
-    githubLink: "https://github.com/GrandeJames/portfolio/",
-  },
 ];
 
 export const work = [
