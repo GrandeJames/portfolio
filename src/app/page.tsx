@@ -26,8 +26,8 @@ export default function Home() {
         >
           <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
             👋 Hi, I&apos;m a full-stack developer and a Computer Science student at the University
-            of Hawai&lsquo;i at Mānoa. I am passionate about creating maintainable and scalable
-            software solutions that customers love.
+            of Hawai&lsquo;i at Mānoa. I am passionate about creating quality software solutions
+            that users love.
           </p>
         </motion.div>
       </div>
@@ -40,8 +40,8 @@ export default function Home() {
         >
           <div className="m-3 text-center">
             Email:{" "}
-            <a href="mailto:james.grande6@gmail.com" className="underline">
-              james.grande6@gmail.com
+            <a href="mailto:jlgrande@hawaii.edu" className="underline">
+              jlgrande@hawaii.edu
             </a>
           </div>
         </motion.div>
