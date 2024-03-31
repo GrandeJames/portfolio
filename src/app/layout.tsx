@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Link from "next/link";
+import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <div className="min-h-screen">
           <div className="p-4 md:p-10 lg:p-20">
-            <nav className="flex justify-center gap-6 text-gray-500 mb-10">
-              <Link href="/">home</Link>
-              <Link href="/projects">projects</Link>
-              <Link href="/work">work</Link>
-            </nav>
+            <Navbar />
             {children}
           </div>
         </div>
