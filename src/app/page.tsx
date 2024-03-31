@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon } from "./icons/linkedIn-icon";
-
-// TODO: fix duplications!
+import { LinkedInIcon } from "./icons/LinkedInIcon";
+import { GitHubIcon } from "./icons/GitHubIcon";
 
 export default function Home() {
   return (
@@ -26,10 +25,9 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
-            👋 Hi, I&apos;m a full-stack developer and a Computer Science
-            student at the University of Hawai&lsquo;i at Mānoa. I am passionate
-            about creating maintainable and scalable software solutions that
-            customers love.
+            👋 Hi, I&apos;m a full-stack developer and a Computer Science student at the University
+            of Hawai&lsquo;i at Mānoa. I am passionate about creating maintainable and scalable
+            software solutions that customers love.
           </p>
         </motion.div>
       </div>
@@ -57,10 +55,10 @@ export default function Home() {
         >
           <div className="flex gap-5">
             <Link href={"https://www.linkedin.com/in/jlag6/"}>
-              <LinkedinIcon />
+              <LinkedInIcon />
             </Link>
             <Link href={"https://github.com/GrandeJames"}>
-              <GithubIcon />
+              <GitHubIcon />
             </Link>
           </div>
         </motion.div>
