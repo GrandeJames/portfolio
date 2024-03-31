@@ -1,7 +1,7 @@
 "use client";
-import PageContainer from "../../../components/PageContainer";
+import PageContainer from "../../components/PageContainer";
 import { work } from "../lib/data";
-import { Tools } from "../../../components/Tools";
+import { Tools } from "../../components/Tools";
 import { Metadata } from "next";
 import { motion, Variants } from "framer-motion";
 

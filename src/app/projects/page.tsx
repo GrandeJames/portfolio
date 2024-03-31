@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import PageContainer from "../../../components/PageContainer";
+import PageContainer from "../../components/PageContainer";
 import { Projects } from "./Projects";
 
 // TODO: add meta data

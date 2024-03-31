@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Tools } from "../../../components/Tools";
+import { Tools } from "../../components/Tools";
 import Image from "next/image";
 
 interface ProjectCardProps {
