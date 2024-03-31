@@ -20,14 +20,14 @@ export const ProjectCard = ({
   githubLink,
   websiteLink,
 }: ProjectCardProps) => (
-  <div className="flex flex-col p-4 md:p-10 relative overflow-hidden w-[500px] h-[550px] justify-end">
+  <div className="flex flex-col p-4 md:p-10 relative overflow-hidden h-[500px] lg:h-[600px] justify-end">
     {imageSrc && (
       <Image
         alt=""
         src={imageSrc}
         fill
-        className="object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover"
         priority={true}
         quality={100}
       />
