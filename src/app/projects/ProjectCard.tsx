@@ -23,7 +23,7 @@ export const ProjectCard = ({
   <div className="flex flex-col p-4 md:p-10 relative overflow-hidden w-[500px] h-[550px] justify-end">
     {imageSrc && (
       <Image
-        alt="Project Image"
+        alt=""
         src={imageSrc}
         fill
         className="object-cover"

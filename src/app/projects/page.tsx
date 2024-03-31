@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import PageContainer from "../../components/PageContainer";
 import { Projects } from "./Projects";
 
-// TODO: fix alt text
 // TODO: fix mobile
 
 export const metadata: Metadata = {
