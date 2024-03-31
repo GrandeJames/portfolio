@@ -4,7 +4,7 @@ import { Work } from "./Work";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "test",
+  description: "Explore the professional journey of James Grande.",
 };
 
 export default function Page() {
