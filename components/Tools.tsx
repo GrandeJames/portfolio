@@ -1,8 +1,6 @@
 export function Tool({ name }: { name: string }) {
   return (
-    <span className="text-[0.7rem] px-4 py-1 bg-neutral-500 rounded-3xl text-white">
-      {name}
-    </span>
+    <span className="text-[0.7rem] px-4 py-1 bg-neutral-500 rounded-3xl text-white">{name}</span>
   );
 }
 
