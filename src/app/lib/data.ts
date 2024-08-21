@@ -20,19 +20,19 @@ export const projects = [
 
 export const work = [
   {
-    date: "July 2023 - Apr 2024",
-    title: "Software Engineer Intern",
-    company: "VolunteerAlly",
-    description:
-      "I worked at a startup called VolunteerAlly where I worked as a full-stack web developer to foster the volunteer community in Hawai'i.",
-    tools: ["Typescript", "JavaScript", "Next.js", "React", "CSS", "TailwindCSS", "Bootstrap"],
-  },
-  {
     date: "June 2024 - Aug 2024",
     title: "Software Engineer Intern",
     company: "Servco Pacific Inc.",
     description:
       "I worked as a software engineer intern where I worked on Servco's distribution (ToyotaHawaii, SubaruHawaii) and retail websites (ServcoToyota, ServcoLexus, ServcoSubaru) utilized by many users/customers.",
     tools: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+  },
+  {
+    date: "July 2023 - Apr 2024",
+    title: "Software Engineer Intern",
+    company: "VolunteerAlly",
+    description:
+      "I worked at a startup called VolunteerAlly where I worked as a full-stack web developer to foster the volunteer community in Hawai'i.",
+    tools: ["Typescript", "JavaScript", "Next.js", "React", "CSS", "TailwindCSS", "Bootstrap"],
   },
 ];
