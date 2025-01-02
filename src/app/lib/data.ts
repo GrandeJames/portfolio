@@ -24,7 +24,7 @@ export const work = [
     title: "Software Engineer Intern",
     company: "Servco Pacific Inc.",
     description:
-      "I worked as a software engineer intern where I worked on Servco's distribution (ToyotaHawaii, SubaruHawaii) and retail websites (ServcoToyota, ServcoLexus, ServcoSubaru) utilized by many users/customers.",
+      "As a software engineer intern, I worked on Servco's distribution (ToyotaHawaii, SubaruHawaii) and retail websites (ServcoToyota, ServcoLexus, ServcoSubaru).",
     tools: ["JavaScript", "HTML", "CSS", "Bootstrap", "Azure DevOps"],
   },
   {
