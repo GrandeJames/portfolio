@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: "Bryzi",
+    description:
+      "Bryzi is a full-stack web application designed specifically for students. It enables them to rapidly generate tasks from course schedule images (commonly found in course syllabi) to drastically reduce the time spent on manual task entry. Additionally, Bryzi offers a feature to automatically plan their daily tasks, eliminating manual planning and rescheduling.",
+    tools: ["TypeScript", "NextJS", "TailwindCSS", "Google Gemini API", "Supabase", "React"],
+    websiteLink: "https://bryzi.com/",
+  },
+  {
     title: "Makai",
     description:
       "Won 3rd place at the 2023 Hawaii Annual Code Challenge. Makai is a web app used to help with the removal and data tracking on large marine debris in Hawai'i.",
@@ -33,6 +40,15 @@ export const work = [
     company: "VolunteerAlly",
     description:
       "I worked at a startup called VolunteerAlly where I worked as a full-stack web developer to foster the volunteer community in Hawai'i.",
-    tools: ["Typescript", "JavaScript", "Next.js", "React", "CSS", "TailwindCSS", "Bootstrap", "GitHub"],
+    tools: [
+      "Typescript",
+      "JavaScript",
+      "Next.js",
+      "React",
+      "CSS",
+      "TailwindCSS",
+      "Bootstrap",
+      "GitHub",
+    ],
   },
 ];
