@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Bryzi",
     description:
-      "Bryzi is an automated task management full-stack web application designed specifically for students. It enables them to rapidly generate tasks from course schedule images (commonly found in course syllabi) to drastically reduce the time spent on manual task entry. Additionally, Bryzi can automatically plan daily tasks, eliminating manual planning and rescheduling.",
+      "Bryzi is an automated task management full-stack web application designed specifically for students. It uses an LLM to rapidly generate tasks from course schedule images (commonly found in course syllabi) to drastically reduce the time spent on manual task entry. Additionally, Bryzi can automatically plan daily tasks, eliminating manual planning and rescheduling.",
     tools: ["TypeScript", "NextJS", "TailwindCSS", "Google Gemini API", "Supabase", "React"],
     websiteLink: "https://bryzi.com/",
   },
