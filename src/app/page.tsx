@@ -25,9 +25,8 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-gray-800 mb-5 max-w-[50ch] text-center">
-            👋 Hi, I&apos;m a software engineer and a B.S. Computer Science graduate at the University
-            of Hawai&lsquo;i at Mānoa. I am passionate about creating quality software solutions
-            that users love.
+            👋 Hi, I&apos;m an aspiring software engineer and a B.S. Computer Science graduate at the University
+            of Hawai&lsquo;i at Mānoa. I am passionate about building quality software.
           </p>
         </motion.div>
       </div>
