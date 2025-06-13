@@ -15,7 +15,7 @@ export function Work() {
       initial="hidden"
       animate="visible"
       variants={cardVariants}
-      className="flex flex-wrap gap-10"
+      className="grid grid-cols-1 lg:flex lg:flex-wrap gap-10"
     >
       {work.map((job, index) => (
         <motion.div
@@ -25,7 +25,7 @@ export function Work() {
         >
           <article
             key={index}
-            className="max-w-[75ch] bg-gray-500 p-4 md:p-10 bg-opacity-10 flex flex-col gap-4"
+            className="max-w-[75ch] h-[20rem] w-full lg:min-w-[30rem] bg-gray-500 p-4 md:p-10 bg-opacity-10 flex flex-col gap-4"
           >
             <div className="text-sm">{job.date}</div>
             <div className="">
