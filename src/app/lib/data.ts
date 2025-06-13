@@ -29,6 +29,12 @@ export const projects = [
 
 export const work = [
   {
+    date: "June 2025 - Present",
+    title: "Software Developer",
+    company: "eWorld Enterprise Solutions, Inc.",
+    tools: [],
+  },
+  {
     date: "June 2024 - Aug 2024",
     title: "Software Engineer Intern",
     company: "Servco Pacific Inc.",
